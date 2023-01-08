@@ -34,82 +34,77 @@
 
 //* Global variable
 
-// let userName = "Charukirti"; //global variable
+let userName = "Charukirti"; //global variable
 
-// function printUser() {
-//     userName = "lalit";
-//     console.log(userName);
-// }
-// console.log(userName); //remains same before function call
-// printUser()
-// console.log(userName); //changes after function call
+function printUser() {
+    userName = "lalit";
+    console.log(userName);
+}
+console.log(userName); //remains same before function call
+printUser()
+console.log(userName); //changes after function call
 
 //* inner variable or local variable
 
-// function outerVar() {
-//     let age = 12;
-//     console.log(age);
-// }
+function outerVar() {
+    let age = 12;
+    console.log(age);
+}
 
 // outerVar()
 // console.log(age);
 
 //! Function with Parameters
 
-// function signUp(user , mail){
-//     let userName = user;
-//     let userMail = mail;
-//     console.log(`The user name is ${userName} and user email is ${userMail}`);
-// }
+function signUp(user , mail){
+    let userName = user;
+    let userMail = mail;
+    console.log(`The user name is ${userName} and user email is ${userMail}`);
+}
 
-// signUp("Charukirti", "charukirticc2609@gmail.com");
+signUp("Charukirti", "charukirticc2609@gmail.com");
 
 //! function calling another function
-// function func(uname,umail) {
-// if(uname == "Charukirti", umail == "charukirticc2609@gmail.com") {
-// console.log("Successfully logged in.");
-// } else {
-// console.log("Enter correct details.");
-// }
-// myfunc(uname,umail)
-// }
+function func(uname,umail) {
+if(uname == "Charukirti", umail == "charukirticc2609@gmail.com") {
+console.log("Successfully logged in.");
+} else {
+console.log("Enter correct details.");
+}
 
-// function myfunc(uname, umail){
-// console.log(`The username is ${uname} & user email is ${umail} `);
-// func("Charukirti","charukirticc2609@gmail.com");
-// return uname,umail;
-// func(uname,umail)
-// }
+}
 
-// myfunc("charukirt","charukirticc2609@gmail.com")
+
+
+func("charukirt","charukirticc2609@gmail.com")
 
 //! return value
 
-// function checkAge(age) {
-//     if(age >= 18){
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+function checkAge(age) {
+    if(age >= 18){
+        return true;
+    } else {
+        return false;
+    }
+}
 
-// let age = 8;
+let age = 19;
 
-// if (checkAge(age)) {
-//     console.log("Permission granted");
-// } else {
-//     console.log("Permission denied");
-// }
+if (checkAge(age)) {
+    console.log("Permission granted");
+} else {
+    console.log("Permission denied");
+}
 
 //! Function Expression
 
-// let expression = function() {
-//     console.log("Hello Function Expression");
-// }
+let expression = function() {
+    console.log("Hello Function Expression");
+}
 
-// expression()
+expression()
 
-// console.log(expression);
+console.log(expression);
 
 let userRole = function (userName, userRole) {
   switch (userRole) {
@@ -132,3 +127,48 @@ let userRole = function (userName, userRole) {
 
 console.log(userRole("Charukirti","admin"));
 console.log(userRole("Charukirti","creator"));
+
+
+//* Arrow functions
+
+let mainFunc = () => "Charukirti";
+console.log(mainFunc());
+
+// Arrow function with parameter
+let printNum = (a, b) => a + b; // it uses implicit return
+console.log(printNum(12, 10));
+
+let equals = function(a, b) {
+    if(a === b) {
+        return 'Equal';
+    } else {
+        return 'Unequal';
+    }
+}
+
+console.log(equals(1, 1))
+console.log(equals(1, 2))
+
+function repdigit(n) {
+    let once = n % 10;
+    let tens = Math.floor(n / 10);
+
+    if(once === tens) {
+        return 'Repdigit!';
+    } else {
+        return 'No Repdigit!'
+    }
+}
+
+console.log(repdigit(22));
+console.log(repdigit(23));
+
+function addWithSurcharge(a, b) {
+    if(a <= 10 && b <= 10) {
+        return '1';
+    } else if(a >= 10 && b >= 10) {
+        return '2';
+    }
+}
+
+console.log(addWithSurcharge(12,24))
