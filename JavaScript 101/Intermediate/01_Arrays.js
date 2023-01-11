@@ -36,3 +36,16 @@ console.log(avengers[5]); // Hawkaye
 const colors = ['Red', 'Orange', 'Pink', 'Yellow', 'Blue'];
 colors[4] = 'Violet'; // adds Violet at the place of Blue. 
 console.log(colors); 
+
+const toArray = (a, b) => [a, b];
+console.log(toArray(10, 12));
+
+const  getFirstElement = ([a, b]) => a;
+console.log(getFirstElement([11, 13]));
+
+function setFirstElement([a, b], c){
+   let arr = [a, b];
+   arr[0] = c;
+   return arr;
+}
+console.log(setFirstElement([15, 16], 5));
